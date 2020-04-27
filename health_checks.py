@@ -9,7 +9,7 @@ def check_disk_usage(disk):
       return free > 30
 def check_cpu_usage():
       """ Verifies that there's enough unused cpu """
-      usage = psutil.cpu.percent(1)
+      usage = psutil.cpu_percent(1)
       return usage < 73
     
 # If there is not enough disk , or not enough CPU , Print an error
